@@ -19,8 +19,8 @@ class Simon
 
   def take_turn
     if !game_over
-      show_sequence
       require_sequence
+      show_sequence
       round_success_message
       @sequence_length += 1
     end
@@ -31,6 +31,13 @@ class Simon
   end
 
   def require_sequence
+    puts "What's the sequence?"
+    begin
+      sequence = gets.chomp.split
+    rescue
+      puts "That sequence is the wrong length."
+      retry
+    end
 
   end
 
