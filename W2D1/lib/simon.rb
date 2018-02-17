@@ -39,14 +39,16 @@ class Simon
   end
 
   def round_success_message
-
+    puts "Congrats! You won this round! The sequence was: #{seq}"
   end
 
   def game_over_message
-
+    puts "Wrong! The sequence was #{seq}. Game over."
   end
 
   def reset_game
-
+    @sequence_length = 1
+    @game_over = false
+    @seq = []
   end
 end
