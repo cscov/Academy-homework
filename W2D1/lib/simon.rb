@@ -14,7 +14,12 @@ class Simon
   end
 
   def take_turn
-    
+    if !game_over
+      show_sequence
+      require_sequence
+      round_success_message
+      @sequence_length += 1
+    end
   end
 
   def show_sequence
