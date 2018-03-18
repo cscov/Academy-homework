@@ -55,3 +55,12 @@ function sumOfNPrimes(n) {
   }
   return sum;
 }
+
+  const printCallback = function (arr){
+    arr.forEach(name => console.log(name));
+  };
+
+  function titleize(array,  callback) {
+    let titleArr = array.map(name => `Mx. ${name} Jingleheimer Schmidt`);
+    callback(titleArr);
+  }
