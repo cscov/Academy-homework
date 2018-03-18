@@ -98,3 +98,19 @@ function sumOfNPrimes(n) {
 
   let herd = [ellie, charlie, kate, micah];
   herd.forEach(elephant => elephant.paradeHelper(elephant.name));
+
+  function dinerBreakfast(orderItem = null) {
+    let order = ["scrambled eggs and bacon"];
+    // debugger
+    if (orderItem !== null) {
+        order.push(orderItem);
+    }
+    let i = 0;
+    let readOrder = "I'd like ";
+    while (i < order.length) {
+      readOrder += order[i];
+      i ++;
+    }
+    readOrder += " please";
+    console.log(readOrder);
+  }
