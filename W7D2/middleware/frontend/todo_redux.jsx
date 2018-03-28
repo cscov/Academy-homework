@@ -43,12 +43,12 @@ const addLoggingToDispatch = store => next => action => {
   return next(action).then(console.log(store.getState()));
 };
 
-function applyMiddlewares(store, middlewares) {
+function applyMiddlewares(store, ...middlewares) {
   let dispatch = store.dispatch;
 
   middlewares.forEach( (middleware) => {
     dispatch = middleware(store)(dispatch);
-  }
+  });
 
   return Object.assign({}, store, { dispatch });
 }
